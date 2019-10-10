@@ -1,0 +1,19 @@
+1. semantic.css
+
+semantic.css is a copy of the shiny.semantic CDN_PATH when an app is created with the desired theme (this is a copy of semantic.flatly.css)
+
+this is then renamed semantic.css and is then configured.
+
+2. semantic.js
+is copied from ../Semantic-UI-230/
+
+3. components and themes are copied from ../Semantic-UI-230/
+to avoid Failed to load resource: the server responded with a status of 404 (Not found)
+
+4. script options(shiny.custom.semantic = "styles/", shiny.minified = FALSE)
+
+At top of script options needs to be set to shiny.custom.semantic = "styles/" (set it to NULL again to use default)
+for shiny.semantic not to use their CDP_PATH and instead looks in the "styles/" folder on the server. 
+
+shiny.minified needs to be false 
+for the app to look for minified css. Probably should minify for production.
